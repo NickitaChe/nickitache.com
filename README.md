@@ -1,6 +1,8 @@
 # nickitache.com
 
-Personal website for [nickitache.com](https://nickitache.com).
+Personal homepage for [nickitache.com](https://nickitache.com).
+
+Minimal Vite + TypeScript site with RU/ENG content switching.
 
 ## Local development
 
@@ -16,21 +18,16 @@ npm run build
 npm run preview
 ```
 
-## Cloudflare Pages
+## Deployment
 
-Use these settings when connecting the repository to Cloudflare Pages:
+The repository is connected to Cloudflare Workers & Pages and deploys from `main`.
 
-- Framework preset: **Vite**
 - Build command: `npm run build`
 - Build output directory: `dist`
-- Root directory: `/`
-- Recommended Node.js version: **20+**
-
-After the first successful deployment, add `nickitache.com` as a custom domain in the Pages project.
 
 ## Structure
 
-- `index.html` — page markup and metadata
-- `src/main.ts` — small client-side behavior
-- `src/style.css` — all visual styling
-- `public/` — favicon, robots, sitemap and Pages headers
+- `index.html` — page structure and links
+- `src/main.ts` — language switching
+- `src/style.css` — visual styling
+- `public/` — favicon, robots, sitemap and headers
