@@ -1,198 +1,185 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#0b0d10" />
-    <meta name="description" content="Nickita Che — software developer working with C#/.NET, TypeScript and PostgreSQL." />
+    <meta name="theme-color" content="#f4f4ee" />
+    <meta
+      name="description"
+      content="Nickita Che — программист. Проекты, ссылки и контакты."
+    />
     <meta name="author" content="Nickita Che" />
     <link rel="canonical" href="https://nickitache.com/" />
 
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://nickitache.com/" />
-    <meta property="og:title" content="Nickita Che — Software Developer" />
-    <meta property="og:description" content="C#/.NET, TypeScript, PostgreSQL, platforms, automation and local AI tooling." />
+    <meta property="og:title" content="Nickita Che" />
+    <meta
+      property="og:description"
+      content="Программист. Проекты, ссылки и контакты."
+    />
 
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="Nickita Che — Software Developer" />
-    <meta name="twitter:description" content="C#/.NET, TypeScript, PostgreSQL, platforms, automation and local AI tooling." />
+    <meta name="twitter:title" content="Nickita Che" />
+    <meta
+      name="twitter:description"
+      content="Программист. Проекты, ссылки и контакты."
+    />
 
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <title>Nickita Che — Software Developer</title>
+    <title>Nickita Che</title>
   </head>
   <body>
-    <a class="skip-link" href="#content">Skip to content</a>
+    <a class="skip-link" href="#content" data-i18n="skip">К содержимому</a>
 
-    <header class="site-header">
-      <a class="brand" href="/" aria-label="Nickita Che home">
-        <span class="brand-mark" aria-hidden="true">N/</span>
-        <span>nickitache.com</span>
-      </a>
-
-      <nav class="site-nav" aria-label="Primary navigation">
-        <a href="#projects">Projects</a>
-        <a href="#stack">Stack</a>
-        <a href="#contact">Contact</a>
-        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle color theme">
-          <span class="theme-toggle__icon" aria-hidden="true">◐</span>
-        </button>
-      </nav>
-    </header>
-
-    <main id="content">
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="hero__eyebrow">
-          <span class="status-dot" aria-hidden="true"></span>
-          Software developer
+    <div class="page">
+      <header class="intro">
+        <div>
+          <h1>Nickita Che</h1>
+          <p class="role" data-i18n="role">Программист.</p>
         </div>
 
-        <h1 id="hero-title">
-          I build software that
-          <span class="hero__accent">stays understandable.</span>
-        </h1>
-
-        <p class="hero__lead">
-          C#/.NET, TypeScript and PostgreSQL. I work on product engineering,
-          internal platforms, automation and local AI tooling.
-        </p>
-
-        <div class="hero__actions">
-          <a class="button button--primary" href="#projects">Explore projects</a>
-          <a class="button button--ghost" href="https://github.com/NickitaChe" rel="noreferrer" target="_blank">
-            GitHub
-            <span aria-hidden="true">↗</span>
-          </a>
+        <div class="language-switch" aria-label="Language">
+          <button type="button" data-language="ru" aria-pressed="true">RU</button>
+          <span aria-hidden="true">/</span>
+          <button type="button" data-language="en" aria-pressed="false">ENG</button>
         </div>
+      </header>
 
-        <div class="hero__meta" aria-label="Primary technologies">
-          <span>C# / .NET</span>
-          <span>TypeScript</span>
-          <span>PostgreSQL</span>
-          <span>Infrastructure</span>
-        </div>
-      </section>
+      <main id="content">
+        <section aria-labelledby="about-title">
+          <h2 id="about-title" data-i18n="about.title">Обо мне</h2>
 
-      <section class="section" id="projects" aria-labelledby="projects-title">
-        <div class="section-heading">
-          <div>
-            <p class="section-kicker">Selected work</p>
-            <h2 id="projects-title">Projects</h2>
-          </div>
-          <p class="section-heading__note">Things I am building, testing and refining.</p>
-        </div>
-
-        <div class="project-grid">
-          <article class="project-card project-card--featured">
-            <div class="project-card__top">
-              <span class="project-index">01</span>
-              <span class="project-state">In development</span>
-            </div>
-            <h3>Marmelad Platform</h3>
+          <div class="plain-list">
             <p>
-              A modular Discord automation platform with a web admin surface,
-              per-server isolation and room to grow into a broader community toolkit.
+              <span class="line-label" data-i18n="about.work">Работаю в</span>
+              <a class="external" href="https://4doc.ru/tessa" target="_blank" rel="noreferrer">
+                4doc.ru/tessa
+              </a>
             </p>
-            <div class="tag-list" aria-label="Marmelad Platform technologies">
-              <span>.NET</span>
-              <span>TypeScript</span>
-              <span>PostgreSQL</span>
-              <span>Discord API</span>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-card__top">
-              <span class="project-index">02</span>
-              <span class="project-state">Research</span>
-            </div>
-            <h3>LocalAgentLab</h3>
             <p>
-              A local harness for evaluating coding agents: isolated worktrees,
-              bounded tools, reproducible verification and experiments with small local models.
+              <span class="line-label" data-i18n="about.blog">Блог</span>
+              <a class="external" href="https://t.me/NickitaCheg" target="_blank" rel="noreferrer">
+                @NickitaCheg
+              </a>
             </p>
-            <div class="tag-list" aria-label="LocalAgentLab technologies">
-              <span>C#</span>
-              <span>LLM</span>
-              <span>Git</span>
-              <span>Evaluation</span>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-card__top">
-              <span class="project-index">03</span>
-              <span class="project-state">Ongoing</span>
-            </div>
-            <h3>Tools & experiments</h3>
             <p>
-              Small utilities, infrastructure experiments and prototypes around
-              developer tooling, self-hosting and automation.
+              <span class="line-label" data-i18n="about.dotabuff">Дотабафф</span>
+              <a
+                class="external"
+                href="https://ru.dotabuff.com/players/207677692"
+                target="_blank"
+                rel="noreferrer"
+              >
+                207677692
+              </a>
             </p>
-            <div class="tag-list" aria-label="Tools and experiments technologies">
-              <span>Cloudflare</span>
-              <span>Docker</span>
-              <span>Linux</span>
-              <span>Automation</span>
-            </div>
-          </article>
-        </div>
-      </section>
+            <p>
+              <span class="line-label" data-i18n="about.shikimori">Шикимори</span>
+              <a
+                class="external"
+                href="https://shikimori.io/Marmelad322"
+                target="_blank"
+                rel="noreferrer"
+              >
+                @Marmelad322
+              </a>
+            </p>
+          </div>
+        </section>
 
-      <section class="section" id="stack" aria-labelledby="stack-title">
-        <div class="section-heading">
-          <div>
-            <p class="section-kicker">What I use</p>
-            <h2 id="stack-title">Stack</h2>
-          </div>
-        </div>
+        <section aria-labelledby="projects-title">
+          <h2 id="projects-title" data-i18n="projects.title">Проекты</h2>
 
-        <div class="stack-grid">
-          <div class="stack-item">
-            <span class="stack-item__label">Backend</span>
-            <strong>C# / .NET</strong>
-            <p>APIs, services, integrations and platform code.</p>
-          </div>
-          <div class="stack-item">
-            <span class="stack-item__label">Frontend</span>
-            <strong>TypeScript</strong>
-            <p>Web interfaces, tooling and application logic.</p>
-          </div>
-          <div class="stack-item">
-            <span class="stack-item__label">Data</span>
-            <strong>PostgreSQL</strong>
-            <p>Relational modelling, queries and performance work.</p>
-          </div>
-          <div class="stack-item">
-            <span class="stack-item__label">Ops</span>
-            <strong>Docker / Linux</strong>
-            <p>Deployment, self-hosting and reproducible environments.</p>
-          </div>
-        </div>
-      </section>
+          <div class="projects">
+            <article class="project">
+              <div class="project-heading">
+                <span class="status">&lt;in-dev&gt;</span>
+                <a class="external" href="https://flatform.nickitache.com">Flatform</a>
+              </div>
+              <p data-i18n="projects.flatform">Быстронастраиваемая SaaS-система.</p>
+            </article>
 
-      <section class="contact-section" id="contact" aria-labelledby="contact-title">
-        <p class="section-kicker">Contact</p>
-        <h2 id="contact-title">Want to talk about software?</h2>
-        <p>
-          The easiest way to reach me is by email or GitHub.
-        </p>
-        <div class="contact-links">
-          <a class="contact-link" href="mailto:hello@nickitache.com">
-            <span>Email</span>
-            <strong>hello@nickitache.com</strong>
-          </a>
-          <a class="contact-link" href="https://github.com/NickitaChe" rel="noreferrer" target="_blank">
-            <span>GitHub</span>
-            <strong>@NickitaChe ↗</strong>
-          </a>
-        </div>
-      </section>
-    </main>
+            <article class="project">
+              <div class="project-heading">
+                <span class="status">&lt;in-dev&gt;</span>
+                <a class="external" href="https://marmelad-platform.nickitache.com">
+                  Marmelad Platform
+                </a>
+              </div>
+              <p data-i18n="projects.marmelad">Discord-бот.</p>
+            </article>
 
-    <footer class="site-footer">
-      <span>© <span id="year"></span> Nickita Che</span>
-      <span>Built simply. Hosted on Cloudflare.</span>
-    </footer>
+            <article class="project">
+              <div class="project-heading">
+                <span class="status">&lt;in-dev&gt;</span>
+                <a class="external" href="https://lal.nickitache.com">LaL</a>
+              </div>
+              <p data-i18n="projects.lal">
+                Локальный ИИ-агент и эксперименты с локальными coding agents.
+              </p>
+            </article>
+
+            <article class="project">
+              <div class="project-heading">
+                <span class="status">&lt;in-dev&gt;</span>
+                <a class="external" href="https://tdf.nickitache.com">The Drowned Frontier</a>
+              </div>
+              <p data-i18n="projects.tdf">Экстракшен MMO RPG.</p>
+            </article>
+          </div>
+        </section>
+
+        <section aria-labelledby="history-title">
+          <h2 id="history-title" data-i18n="history.title">История</h2>
+
+          <div class="history-row">
+            <time datetime="2022">2022 — <span data-i18n="history.present">н.в.</span></time>
+            <a class="external" href="https://4doc.ru/tessa" target="_blank" rel="noreferrer">
+              4-DOC / TESSA
+            </a>
+          </div>
+        </section>
+
+        <section aria-labelledby="contact-title">
+          <h2 id="contact-title" data-i18n="contact.title">Связь</h2>
+
+          <div class="plain-list">
+            <p>
+              <span class="line-label">GitHub</span>
+              <a
+                class="external"
+                href="https://github.com/NickitaChe"
+                target="_blank"
+                rel="noreferrer"
+              >
+                @NickitaChe
+              </a>
+            </p>
+            <p>
+              <span class="line-label">Telegram</span>
+              <a
+                class="external"
+                href="https://t.me/NickitaChe"
+                target="_blank"
+                rel="noreferrer"
+              >
+                @NickitaChe
+              </a>
+            </p>
+            <p>
+              <span class="line-label">Email</span>
+              <a href="mailto:hello@nickitache.com">hello@nickitache.com</a>
+            </p>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <span>2026 — <span data-i18n="footer.present">сейчас</span></span>
+        <span>© Nickita Che</span>
+      </footer>
+    </div>
 
     <script type="module" src="/src/main.ts"></script>
   </body>
