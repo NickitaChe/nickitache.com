@@ -4,16 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#f4f4ee" />
-    <meta name="description" content="Nickita Che — программист. Проекты, ссылки и контакты." />
+    <meta name="description" content="Nickita Che — разработчик программного обеспечения. Проекты, ссылки и контакты." />
     <meta name="author" content="Nickita Che" />
     <link rel="canonical" href="https://nickitache.com/" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://nickitache.com/" />
     <meta property="og:title" content="Nickita Che" />
-    <meta property="og:description" content="Программист. Проекты, ссылки и контакты." />
+    <meta property="og:description" content="Разработчик программного обеспечения. Проекты, ссылки и контакты." />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="Nickita Che" />
-    <meta name="twitter:description" content="Программист. Проекты, ссылки и контакты." />
+    <meta name="twitter:description" content="Разработчик программного обеспечения. Проекты, ссылки и контакты." />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <title>Nickita Che</title>
   </head>
@@ -24,7 +24,7 @@
       <header class="intro">
         <div class="intro-copy">
           <h1>Nickita Che</h1>
-          <p class="role" data-i18n="role">Программист.</p>
+          <p class="role" data-i18n="role">Разработчик программного обеспечения.</p>
 
           <div class="language-switch" aria-label="Language">
             <button type="button" data-language="ru" aria-pressed="true">RU</button>
@@ -86,6 +86,10 @@
               <div class="project-heading">
                 <span class="status">&lt;in-dev&gt;</span>
                 <a class="external" href="https://flatform.nickitache.com">Flatform</a>
+                <span class="project-stats" data-project-stats="Flatform" hidden>
+                  <span class="stat-added" data-lines-added></span>
+                  <span class="stat-deleted" data-lines-deleted></span>
+                </span>
               </div>
               <p data-i18n="projects.flatform">Быстронастраиваемая SaaS-система.</p>
             </article>
@@ -94,6 +98,10 @@
               <div class="project-heading">
                 <span class="status">&lt;in-dev&gt;</span>
                 <a class="external" href="https://marmelad-platform.nickitache.com">Marmelad Platform</a>
+                <span class="project-stats" data-project-stats="Marmelad Platform" hidden>
+                  <span class="stat-added" data-lines-added></span>
+                  <span class="stat-deleted" data-lines-deleted></span>
+                </span>
               </div>
               <p data-i18n="projects.marmelad">Discord-бот.</p>
             </article>
@@ -102,6 +110,10 @@
               <div class="project-heading">
                 <span class="status">&lt;in-dev&gt;</span>
                 <a class="external" href="https://lal.nickitache.com">LaL</a>
+                <span class="project-stats" data-project-stats="LaL" hidden>
+                  <span class="stat-added" data-lines-added></span>
+                  <span class="stat-deleted" data-lines-deleted></span>
+                </span>
               </div>
               <p data-i18n="projects.lal">Локальный ИИ-агент и эксперименты с локальными coding agents.</p>
             </article>
@@ -110,8 +122,39 @@
               <div class="project-heading">
                 <span class="status">&lt;in-dev&gt;</span>
                 <a class="external" href="https://tdf.nickitache.com">The Drowned Frontier</a>
+                <span class="project-stats" data-project-stats="The Drowned Frontier" hidden>
+                  <span class="stat-added" data-lines-added></span>
+                  <span class="stat-deleted" data-lines-deleted></span>
+                </span>
               </div>
               <p data-i18n="projects.tdf">Экстракшен MMO RPG.</p>
+            </article>
+          </div>
+        </section>
+
+        <section aria-labelledby="tools-title">
+          <h2 id="tools-title" data-i18n="tools.title">Инструменты</h2>
+
+          <div class="projects">
+            <article class="project">
+              <div class="project-heading">
+                <span class="status">&lt;public&gt;</span>
+                <a class="external" href="https://stats.nickitache.com">dev-stats</a>
+              </div>
+              <p class="tool-details">
+                <a class="external" href="https://github.com/NickitaChe/dev-stats" target="_blank" rel="noreferrer">GitHub</a>
+                <span class="tool-stats">
+                  <span data-stats-state data-i18n="stats.loading">статистика загружается…</span>
+                  <span data-stats-values hidden>
+                    <span data-total-commits></span>
+                    <span data-i18n="stats.commits">коммитов</span>
+                    <span aria-hidden="true">·</span>
+                    <span data-i18n="stats.lines">строки</span>
+                    <span class="stat-added" data-total-lines-added></span>
+                    <span class="stat-deleted" data-total-lines-deleted></span>
+                  </span>
+                </span>
+              </p>
             </article>
           </div>
         </section>

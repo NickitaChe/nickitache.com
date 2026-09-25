@@ -7,6 +7,8 @@
   --rule: #d8d7cf;
   --link: #3159c7;
   --status: #4f765c;
+  --added: #3f7d4e;
+  --deleted: #b54848;
   --selection: #d9e2ff;
   --avatar-bg: #ecebe3;
 
@@ -210,16 +212,47 @@ h2 {
 .project-heading {
   display: flex;
   align-items: baseline;
+  flex-wrap: wrap;
   gap: 11px;
 }
 
 .project-heading a { font-weight: 650; }
+
+.project-stats {
+  display: inline-flex;
+  gap: 9px;
+  margin-left: auto;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+}
+
+.stat-added { color: var(--added); }
+.stat-deleted { color: var(--deleted); }
 
 .project p {
   margin: 5px 0 0;
   padding-left: 82px;
   color: var(--muted);
 }
+
+.project p.tool-details {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px 12px;
+}
+
+.tool-stats,
+[data-stats-values] {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: baseline;
+  font-variant-numeric: tabular-nums;
+}
+
+[hidden] { display: none !important; }
 
 .status {
   flex: 0 0 71px;
@@ -296,6 +329,11 @@ footer {
     display: grid;
     grid-template-columns: 71px 1fr;
     gap: 8px;
+  }
+
+  .project-stats {
+    grid-column: 2;
+    margin-left: 0;
   }
 
   .history-row {
