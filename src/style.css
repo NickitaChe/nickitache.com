@@ -243,6 +243,51 @@ h2 {
   gap: 6px 12px;
 }
 
+
+.avatar-tool-row {
+  display: grid;
+  grid-template-columns: 71px minmax(0, 1fr) 128px;
+  column-gap: 11px;
+  align-items: center;
+  min-height: 128px;
+  padding: 0;
+}
+
+.avatar-tool-row > .status {
+  align-self: start;
+  padding-top: 17px;
+}
+
+.avatar-tool-info {
+  min-width: 0;
+  padding: 17px 0 18px;
+}
+
+.avatar-tool-info > a {
+  font-weight: 650;
+}
+
+.project .avatar-tool-info p {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 5px 0 0;
+  padding: 0;
+  color: var(--muted);
+}
+
+.avatar-tool-row .tool-avatar {
+  display: block;
+  width: 128px;
+  height: 128px;
+  margin: 0;
+  justify-self: end;
+  align-self: center;
+  object-fit: cover;
+  background: var(--avatar-bg);
+}
+
 .tool-stats,
 [data-stats-values] {
   display: inline-flex;
@@ -302,6 +347,7 @@ footer {
 
   .project-heading { align-items: flex-start; }
 
+
   .project p {
     padding-left: 0;
     margin-top: 7px;
@@ -311,6 +357,15 @@ footer {
 }
 
 @media (max-width: 520px) {
+  .avatar-tool-row {
+    grid-template-columns: 71px minmax(0, 1fr) 96px;
+  }
+
+  .avatar-tool-row .tool-avatar {
+    width: 96px;
+    height: 96px;
+  }
+
   .intro {
     grid-template-columns: 1fr 118px;
     gap: 18px;
@@ -335,6 +390,8 @@ footer {
     grid-column: 2;
     margin-left: 0;
   }
+
+
 
   .history-row {
     grid-template-columns: 88px 1fr;

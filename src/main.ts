@@ -33,6 +33,8 @@ const translations: Record<Language, Record<string, string>> = {
     'projects.lal': 'Локальный ИИ-агент и эксперименты с локальными coding agents.',
     'projects.tdf': 'Экстракшен MMO RPG.',
     'tools.title': 'Инструменты',
+    'avatars.name': 'Генератор аватаров',
+    'avatars.now': 'Ваш аватар сейчас:',
     'stats.loading': 'статистика загружается…',
     'stats.unavailable': 'статистика недоступна',
     'stats.commits': 'коммитов',
@@ -56,6 +58,8 @@ const translations: Record<Language, Record<string, string>> = {
     'projects.lal': 'A local AI agent and experiments with local coding agents.',
     'projects.tdf': 'Extraction MMORPG.',
     'tools.title': 'Tools',
+    'avatars.name': 'Avatar generator',
+    'avatars.now': 'Your avatar right now:',
     'stats.loading': 'loading statistics…',
     'stats.unavailable': 'statistics unavailable',
     'stats.commits': 'commits',
@@ -168,3 +172,10 @@ languageButtons.forEach((button) => {
 });
 
 void loadStats();
+
+
+const currentAvatar = document.querySelector<HTMLImageElement>('[data-current-avatar]');
+if (currentAvatar) {
+  const timeSeed = Date.now().toString();
+  currentAvatar.src = `https://avatars.nickitache.com/api/avatar/${timeSeed}.svg?size=64`;
+}
