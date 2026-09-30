@@ -2,7 +2,7 @@ import './style.css';
 
 type Language = 'ru' | 'en';
 
-interface PublicProjectStats {
+interface PublicGroupStats {
   name: string;
   commits: number;
   linesAdded: number;
@@ -10,12 +10,8 @@ interface PublicProjectStats {
 }
 
 interface PublicStatsPayload {
-  totals: {
-    commits: number;
-    linesAdded: number;
-    linesDeleted: number;
-  };
-  projects: PublicProjectStats[];
+  projects: PublicGroupStats[];
+  tools?: PublicGroupStats[];
 }
 
 const translations: Record<Language, Record<string, string>> = {
@@ -92,25 +88,37 @@ const renderStats = (stats: PublicStatsPayload): void => {
     node.hidden = false;
   });
 
-  const state = document.querySelector<HTMLElement>('[data-stats-state]');
-  const values = document.querySelector<HTMLElement>('[data-stats-values]');
-  const commits = document.querySelector<HTMLElement>('[data-total-commits]');
-  const added = document.querySelector<HTMLElement>('[data-total-lines-added]');
-  const deleted = document.querySelector<HTMLElement>('[data-total-lines-deleted]');
+  const tools = new Map((stats.tools ?? []).map((tool) => [tool.name, tool]));
+  document.querySelectorAll<HTMLElement>('[data-tool-stats]').forEach((node) => {
+    const tool = tools.get(node.dataset.toolStats ?? '');
+    const state = node.querySelector<HTMLElement>('[data-stats-state]');
+    const values = node.querySelector<HTMLElement>('[data-stats-values]');
 
-  if (commits) commits.textContent = number.format(stats.totals.commits);
-  if (added) added.textContent = `+${number.format(stats.totals.linesAdded)}`;
-  if (deleted) deleted.textContent = `−${number.format(stats.totals.linesDeleted)}`;
-  if (state) state.hidden = true;
-  if (values) values.hidden = false;
+    if (!tool) {
+      if (state) {
+        state.dataset.i18n = 'stats.unavailable';
+        state.textContent = translations[currentLanguage]['stats.unavailable'];
+      }
+      return;
+    }
+
+    const commits = node.querySelector<HTMLElement>('[data-commits]');
+    const added = node.querySelector<HTMLElement>('[data-lines-added]');
+    const deleted = node.querySelector<HTMLElement>('[data-lines-deleted]');
+
+    if (commits) commits.textContent = number.format(tool.commits);
+    if (added) added.textContent = `+${number.format(tool.linesAdded)}`;
+    if (deleted) deleted.textContent = `−${number.format(tool.linesDeleted)}`;
+    if (state) state.hidden = true;
+    if (values) values.hidden = false;
+  });
 };
 
 const showStatsError = (): void => {
-  const state = document.querySelector<HTMLElement>('[data-stats-state]');
-  if (!state) return;
-
-  state.dataset.i18n = 'stats.unavailable';
-  state.textContent = translations[currentLanguage]['stats.unavailable'];
+  document.querySelectorAll<HTMLElement>('[data-stats-state]').forEach((state) => {
+    state.dataset.i18n = 'stats.unavailable';
+    state.textContent = translations[currentLanguage]['stats.unavailable'];
+  });
 };
 
 const loadStats = async (): Promise<void> => {
